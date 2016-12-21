@@ -7,19 +7,24 @@ function addWithTen(a){
 console.log(addWithTen(1)());
 
 function c( dieuKien, func1, func2 ){
-  if(dieuKien){
-    func1()
-  }else{
-    func2()
-  }
+  // if(dieuKien){
+  //   func1()
+  // }else{
+  //   func2()
+  // }
+  // var d = dieuKien?func1:func2;
+  // d();
+  dieuKien?func1('abcd'):func2('efgh');
 }
 
-function a(){
-  console.log('F1');
+//github.com/vanpho93
+
+function a(g){
+  console.log('F1 ' + g);
 }
 
-function b(){
-  console.log('F2');
+function b(h){
+  console.log('F2 ' + h);
 }
 
-c(true, a, b);
+c(false, a, b);
